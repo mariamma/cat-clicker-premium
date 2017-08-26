@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cat clicker premium</title>
+	<style type="text/css">
+		img{
+			width:450px;
+			height: 400px;
+		}
+		form {
+		  /* Just to center the form on the page */
+		  margin: 10px;
+		  width: 400px;
+		  /* To see the outline of the form */
+		  padding: 1em;
+		  border: 1px solid #CCC;
+		  border-radius: 1em;
+		}
+		form div + div {
+		  margin-top: 1em;
+		}
+		label {
+		  /* To make sure that all labels have the same size and are properly aligned */
+		  display: inline-block;
+		  width: 90px;
+		  text-align: right;
+		}
+		input, textarea {
+		  /* To make sure that all text fields have the same font settings
+		     By default, textareas have a monospace font */
+		  font: 1em sans-serif;
+
+		  /* To give the same size to all text fields */
+		  width: 300px;
+		  box-sizing: border-box;
+
+		  /* To harmonize the look & feel of text field border */
+		  border: 1px solid #999;
+		}
+		input:focus, textarea:focus {
+		  /* To give a little highlight on active elements */
+		  border-color: #000;
+		}
+		textarea {
+		  /* To properly align multiline text fields with their labels */
+		  vertical-align: top;
+
+		  /* To give enough room to type some text */
+		  height: 5em;
+		}
+
+		.button {
+		  /* To position the buttons to the same position of the text fields */
+		  padding-left: 90px; /* same size as the label elements */
+		}
+
+		button {
+		  /* This extra margin represent roughly the same space as the space
+		     between the labels and their text fields */
+		  margin-left: .5em;
+		}
+	</style>
+</head>
+<body>
+	<ul id="cat-list"></ul>
+	<div id="catselector"></div>
+	<div id="catview">
+		<h2 id="catname"></h2>
+		<div id="catcount"></div>
+		<img id="catimage" src="">
+	</div>
+	<button id="adminbutton">Admin</button>
+	<div id="form">
+		<form action="" method="post">
+			<div>
+				<label for="name">Name</label>
+		  		<input type="text" name="name" id="name">
+			</div>	
+		 	<div>
+				<label for="url">URL</label>
+		  		<input type="text" name="url" id="url">
+			</div>	
+			<div>
+				<label for="clicks">Clicks</label>
+		  		<input type="text" name="clicks" id="clicks">
+			</div>	
+		  <br>
+		   <div class="button">
+		      <button type="button"  id="cancelbtn">Cancel</button>
+		      <button type="button" id="submitbtn">Submit</button>
+		    </div>
+		</form> 
+
+	</div>
+	<script src="app.js"></script>
+</body>
+</html>
